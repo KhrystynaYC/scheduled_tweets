@@ -7,8 +7,11 @@ Rails.application.routes.draw do
 
   #GET / (home page)
 
-  # get "/", to: "main#index" ---> SAME AS root to
+  # get sign up form page
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
 
+  # get "/", to: "main#index" ---> SAME AS root to
   root to: "main#index"
 
 end
