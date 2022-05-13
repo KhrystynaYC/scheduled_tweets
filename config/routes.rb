@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
+  # get sign in form page
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
+
   # get log out page, DELETE THE USER
   delete "logout", to: "sessions#destroy"
 
