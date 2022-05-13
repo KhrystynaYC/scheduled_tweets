@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
+  # get log out page, DELETE THE USER
+  delete "logout", to: "sessions#destroy"
+
   # get "/", to: "main#index" ---> SAME AS root to
   root to: "main#index"
-
 end
